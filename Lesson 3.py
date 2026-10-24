@@ -99,7 +99,7 @@ print("🏆 QUIZ FINISHED 🏆")
 print("Your score:", score, "out of 10")
 
 if score == 10:
-    print("👑 LEGENDARY GAMER! UNSTOPPABLE!")
+    print("👑 LEGENDARY GAMER! YOU ARE UNSTOPPABLE!")
 elif score >= 8:
     print("💎 ELITE GAMER!")
 elif score >= 6:
