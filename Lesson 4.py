@@ -6,8 +6,8 @@ secret_number = random.randint(1, 1000)
 attempts = 0
 
 print("🎮 Welcome to Guess the Number!")
-print("I'm thinking of a number between 1 and 1000.")
-
+print("I'm thinking of a number between 1 and 1000000.😁")
+print("Im joking its actually a number between 1 and 1000😊")
 while True:
     guess = input("Enter your guess: ")
 
