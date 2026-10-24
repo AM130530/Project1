@@ -1,7 +1,7 @@
 
 import random
 
-words = ["hippopotomonstrosesquipedaliohobia"]
+words = ["hippopotomonstrosesquipedaliophobia"]
 
 secret_word = random.choice(words)
 guessed_letters = []
