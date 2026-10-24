@@ -1,15 +1,15 @@
 
 import random
 
-words = ["python", "computer", "elephant", "school", "gaming"]
+words = ["hippopotomonstrosesquipedaliohobia"]
 
 secret_word = random.choice(words)
 guessed_letters = []
-attempts_left = 6
+attempts_left = 12
 
 print("🎮 WELCOME TO THE WORD GUESSING GAME!")
 print("Guess the secret word one letter at a time.")
-print("You have 6 incorrect guesses available.")
+print("You have 100 incorrect guesses available.")
 
 while attempts_left > 0:
     display_word = ""
