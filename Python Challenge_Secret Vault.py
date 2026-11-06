@@ -1,36 +1,38 @@
-print("===== SECRET VAULT 🏦💳💸=====")
 
-secret_pin = "6729"
+from random import randint
+
+print("===== SECRET VAULT =====")
+
+secret_pin = str(randint(0000, 9999))
+
 attempts = 0
-max_attempts = 5
 
-while attempts < max_attempts:
+while attempts < 5:
 
-    pin = input("Enter your PIN🧑‍💻: ")
+    pin = input("Enter the secret PIN: ")
 
     if pin == secret_pin:
-        print("ACCESS GRANTED!🥳")
-        print("Vault unlocked!🥳")
+        print("Correct PIN!")
+        print("ACCESS GRANTED!")
         break
 
     else:
-        attempts += 1
+        print("Wrong PIN!")
+        attempts = attempts + 1
 
-        print("Incorrect PIN!🤡")
+        for digit in pin:
 
-        for i in range(len(secret_pin)):
-            if i < len(pin):
-                if pin[i] == secret_pin[i]:
-                    print("Digit", pin[i], "is correct and in position", i + 1)
-                else:
-                    print("Digit", pin[i], "is incorrect.")
+            if digit in secret_pin:
+                position = secret_pin.find(digit) + 1
+                print(digit, "is in the PIN, in position", position)
 
-        remaining = max_attempts - attempts
+            else:
+                print(digit, "is not in the PIN.")
 
-        if remaining > 0:
-            print("Attempts left:", remaining)
-        else:
-            print("ACCESS DENIED!🤡")
-            print("The vault is locked.🤡")
+        print("Attempts left:", 5 - attempts)
 
-print("===== PROGRAM ENDED =====")
+if attempts == 5:
+    print("ACCESS DENIED!")
+    print("The vault is locked.")
+
+print("===== END =====")
